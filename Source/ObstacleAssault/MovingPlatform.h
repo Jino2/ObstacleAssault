@@ -23,4 +23,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	FVector PlatformVelocity = FVector(1.0f, 0.2f, 0.0f);
 };
