@@ -32,8 +32,8 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float MaxDistance = 1000.0f;
 
-	UPROPERTY(EditAnywhere, Category = "Movement")
-	float RotationVelocity = 1.0f;
+	UPROPERTY(EditAnywhere, Category = "Rotation")
+	FRotator RotationVelocity;
 
 	void MovePlatform(float DeltaTime);
 	void RotatePlatform(float DeltaTime);
