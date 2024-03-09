@@ -28,4 +28,10 @@ void AMovingPlatform::Tick(float DeltaTime)
 	SetActorLocation(CurrentLocation);
 
 	Distance = FVector::Dist(StartLocation, CurrentLocation);
+
+	if (Distance > MaxDistance)
+	{
+		StartLocation = CurrentLocation;
+		PlatformVelocity *= -1;
+	}
 }

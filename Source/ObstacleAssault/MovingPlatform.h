@@ -30,5 +30,8 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = "Movement")
 	float Distance = 0.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float MaxDistance = 1000.0f;
 };
 
