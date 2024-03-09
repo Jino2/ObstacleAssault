@@ -15,7 +15,6 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 
-	SetActorLocation(MyFloat);
 }
 
 // Called every frame
@@ -23,6 +22,9 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	MyFloat.Y += 1.0f;
-	SetActorLocation(MyFloat);
+	FVector CurrentLocation = GetActorLocation();
+	CurrentLocation.X += 1.0f;
+	CurrentLocation.Y += 0.2f;
+	SetActorLocation(CurrentLocation);
+	
 }
